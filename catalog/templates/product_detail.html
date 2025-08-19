@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                    <img src="{{ product.image.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" height="300" width="100%">
+                    <p class="card-text">Категория: {{ product.category }}</p>
+                    <p class="card-text">{{ product.name }}</p>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">{{ product.price }}руб</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" href="{% url 'catalog:info_products' %}" role="button">Назад</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
