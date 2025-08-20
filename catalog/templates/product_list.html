@@ -6,9 +6,9 @@
             <div class="col">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                    <img src="{{ prdct.image.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" height="300" width="100%">
+                    <img src="{{ prdct.image.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
                     <p class="card-text">{{ prdct.name }}</p>
-                    <p class="card-text">{{ prdct.description|slice:":100" }}</p>
+                    <p class="card-text">{{ prdct.description|truncatechars:100 }}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <a class="btn btn-primary" href="{% url 'catalog:product_detail' prdct.pk %}" role="button">Подробнее</a>
