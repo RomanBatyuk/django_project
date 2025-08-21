@@ -5,7 +5,11 @@
             <div class="col">
                 <div class="card shadow-sm">
                     <div class="card-body">
+                    {% if product.image %}
                     <img src="{{ product.image.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
+                    {% else %}
+                    <img src="/path/to/default/image.jpg" alt="No Image Available" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
+                    {% endif %}
                     <p class="card-text">Категория: {{ product.category }}</p>
                     <p class="card-text">{{ product.name }}</p>
                     <p class="card-text">{{ product.description }}</p>
