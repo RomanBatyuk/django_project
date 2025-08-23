@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'catalog/base.html' %}
 {% block content %}
 <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for prdct in product %}
+            {% for prdct in object_list %}
             <div class="col">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
