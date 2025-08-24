@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Все статьи | Мой Блог{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Все статьи</h1>
+
+{% for publ in object_list %}
+<div class="mb-3 p-3 border rounded">
+    <a href="{% url 'blog:blog_detail' publ.pk %}" class="h5 d-block">
+        Статья: {{ publ.headline }}<a href="{% url 'blog:blog_detail' publ.pk %}" class="btn btn-sm btn-secondary"></a>
+    </a>
+</div>
+{% empty %}
+<p class="text-muted">Статей пока нет.</p>
+{% endfor %}
+
+<a href="{% url 'blog:blog_create' %}" class="btn btn-primary mt-3">Написать статью</a>
+{% endblock %}

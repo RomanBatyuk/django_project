@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Блог обувного магазина{% endblock %}</title>
+    <meta name="description"
+          content="{% block meta_description %}Блог обувного магазина: советы по выбору обуви, тренды и уход.{% endblock %}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+    <h1>Добро пожаловать в блог обувного магазина! 👟</h1>
+    <nav>
+        <ul>
+            <li><a href="">В магазин</a></li>
+            <li><a href="">О нас</a></li>
+            <li><a href="">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer>
+    <p>&copy; 2023 Блог Обувного Магазина. Все права защищены.</p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>
