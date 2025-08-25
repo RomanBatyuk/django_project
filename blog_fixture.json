@@ -1,0 +1,26 @@
+[
+{
+    "model": "blog.publication",
+    "pk": 7,
+    "fields": {
+        "headline": "Новинки пляжного сезона",
+        "contents": "Просто текст, не хочу ничего выдумывать, редактируется нормально, опять редактируем и опять и снова и опять.",
+        "image": "images/новинки_пляжного_сезона.jpg",
+        "created_at": "2025-08-24T13:01:10.408Z",
+        "published": true,
+        "number_of_views": 12
+    }
+},
+{
+    "model": "blog.publication",
+    "pk": 9,
+    "fields": {
+        "headline": "Тренды классической обуви",
+        "contents": "Просто текст, отредактированный.",
+        "image": "images/классическая_обувь_1GJDM2I.jpg",
+        "created_at": "2025-08-24T14:20:09.185Z",
+        "published": true,
+        "number_of_views": 11
+    }
+}
+]

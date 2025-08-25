@@ -1,13 +1,13 @@
-{% extends 'base.html' %}
+{% extends 'catalog/base.html' %}
 {% block content %}
 <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for prdct in product %}
+            {% for prdct in object_list %}
             <div class="col">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                     {% if prdct.image %}
-                    <img src="{{ prdct.image.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
+                    <img src="{{ prdct.images.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
                     {% else %}
                     <img src="/path/to/default/image.jpg" alt="No Image Available" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
                     {% endif %}
