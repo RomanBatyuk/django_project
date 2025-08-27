@@ -7,7 +7,7 @@
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                     {% if prdct.image %}
-                    <img src="{{ prdct.images.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
+                    <img src="{{ prdct.image.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
                     {% else %}
                     <img src="/path/to/default/image.jpg" alt="No Image Available" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
                     {% endif %}
