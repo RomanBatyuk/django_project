@@ -6,3 +6,6 @@ USER=имя пользователя PostgreSQL
 PASSWORD=пароль пользователя PostgreSQL
 HOST=адрес сервера базы данных
 PORT=порт, на котором работает PostgreSQL
+
+EMAIL_HOST_USER=ваша почта
+EMAIL_HOST_PASSWORD=ваш пароль приложения
