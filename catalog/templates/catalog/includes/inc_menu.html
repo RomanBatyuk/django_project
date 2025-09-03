@@ -9,20 +9,9 @@
             <li><a href="{% url 'catalog:product_list' %}" class="text-white">Главная</a></li>
             {% if user.is_authenticated %}
                     <li><a href="{% url 'authorization:logout' %}" class="text-white">Выйти</a></li>
-<!--                    <li>-->
-<!--	                    <form method="post" action="{% url 'authorization:logout' %}">-->
-<!--	                        {% csrf_token %}-->
-<!--	                        <button type="submit" class="text-white">Выйти-->
-<!--	                        </button>-->
-<!--	                    </form>-->
-<!--	                </li>-->
                 {% else %}
-                    <li><a href="{% url 'authorization:login' %}" class="text-white">Вход</a></li>
                     <li><a href="{% url 'authorization:register' %}" class="text-white">Регистрация</a></li>
                 {% endif %}
-
-
-
         </ul>
     </div>
     </div>
