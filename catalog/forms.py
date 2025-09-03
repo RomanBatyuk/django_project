@@ -13,7 +13,7 @@ class ProductForm(ModelForm):
 
     class Meta:
         model = Product
-        fields = "__all__"
+        exclude = ['owner']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
