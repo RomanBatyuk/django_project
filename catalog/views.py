@@ -10,7 +10,11 @@ from django.urls import reverse_lazy, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.http import HttpResponseForbidden
 from django.shortcuts import redirect
+from django.views.decorators.cache import cache_page
+from django.utils.decorators import method_decorator
+# from django.core.cache import cache
 
+from catalog.services import get_product_list_from_cache
 
 
 class HomeView(TemplateView):
@@ -51,7 +55,11 @@ class ProductListView(LoginRequiredMixin, ListView):
     template_name = "product/product_list.html"
     context_object_name = "product"
 
+    def get_queryset(self):
+        return get_product_list_from_cache()
 
+
+@method_decorator(cache_page(60 * 15), name='dispatch')
 class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Product
     template_name = 'catalog/product_detail.html'
