@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<main>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for prdct in object_list %}
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                    {% if prdct.image %}
+                    <img src="{{ prdct.image.url }}" alt="Thumbnail" class="bd-placeholder-img card-img-top" style="width: 30%; height: auto;">
+                    {% else %}
+                    <img src="/path/to/default/image.jpg" alt="No Image Available" class="bd-placeholder-img card-img-top" style="width: 100%; height: auto;">
+                    {% endif %}
+                    <p class="card-text">{{ prdct.name }}</p>
+                    <p class="card-text">{{ prdct.description|truncatechars:100 }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" href="{% url 'catalog:product_detail' prdct.pk %}" role="button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</main>
+</html>
